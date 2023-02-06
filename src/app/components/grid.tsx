@@ -21,7 +21,7 @@ export const Grid = (props: GridProps) => {
     return (
         <div style={{
             display: "grid",
-            gap: "1em 1em",
+            gap: "4px 4px",
             gridTemplateColumns: "repeat(5, 5em)",
             gridTemplateRows: "repeat(5, 5em)",
             justifyContent: "center"
