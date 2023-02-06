@@ -1,15 +1,28 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import { useState } from 'react';
+import { Grid, Header, WordDisplay } from './components';
 
 export function App() {
+  const [currentWord, setCurrentWord] = useState("");
+
+  const updateCurrentWord = (letter: string): void => {
+    if (letter) setCurrentWord(currentWord + letter);
+    else setCurrentWord(currentWord.substring(0, currentWord.length - 1));
+  };
+
   return (
-    <StyledApp>
-      <NxWelcome title="boggle" />
-    </StyledApp>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      width: "70vw",
+      margin: "auto",
+      justifyContent: "center",
+      paddingTop: "3em",
+      alignItems: "center"
+    }}>
+      <Header />
+      <WordDisplay currentWord={currentWord} />
+      <Grid updateCurrentWord={updateCurrentWord} />
+    </div>
   );
 }
 
