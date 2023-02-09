@@ -1,11 +1,13 @@
+import { useSelector } from "react-redux";
 import { Colour } from "../definitions";
+import { RootState } from "../store";
 
-interface WordDisplayProps {
-    currentWord: string;
-}
+// interface WordDisplayProps {
+// }
 
-export const WordDisplay = (props: WordDisplayProps) => {
-    const { currentWord } = props;
+export const WordDisplay = () => {
+    const currentWord = useSelector((state: RootState) => state.game.currentWord);
+
     return (
         <div className="subText" style={{
             fontWeight: "bold",

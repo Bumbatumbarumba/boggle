@@ -3,4 +3,5 @@ export enum Colour {
   altBackgroundColour = '#B08BBB',
   borderColour = '#415b58',
   fontColour = '#F4F4F4',
+  errorRed = '#FF0000',
 }

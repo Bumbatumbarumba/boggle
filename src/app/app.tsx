@@ -20,8 +20,8 @@ export function App() {
       alignItems: "center"
     }}>
       <Header />
-      <WordDisplay currentWord={currentWord} />
-      <Grid updateCurrentWord={updateCurrentWord} />
+      <WordDisplay />
+      <Grid />
     </div>
   );
 }
